@@ -1,32 +1,38 @@
-import React from 'react'
-import styles from './Card.module.css'
+import React from "react";
+import styles from "./Card.module.css";
 import { Chip, Tooltip } from "@mui/material";
-import image from '../../assets/assesment.png';
-const Card = ({data,type}) => {
-    // const getCard = (type) => {
-      // switch(type){
-      //   case "album" : {
-      //     const {image,follows,title,songs} = data;
-          return(
-            
-            
+
+const Card = ({ data, type }) => {
+  const getCard = (type) => {
+    switch (type) {
+      case "album": {
+        const { image, follows, title, songs } = data;
+        return (
+          <Tooltip title={`${songs.length} songs`} placement="top" arrow>
             <div className={styles.wrapper}>
-            <div className={styles.card}>
-            <img src ={image} alt='album'/>
-             <div className={styles.banner}>
-             <Chip
-                    label="100 Millions" size="small" className={styles.chip} />
-             </div>
+              <div className={styles.card}>
+                <img src={image} alt="album" className={styles.cardImg} />
+                <div className={styles.banner}>
+                  <Chip
+                    label={`${follows} Follows`}
+                    size="small"
+                    className={styles.chip}
+                  />
+                </div>
+              </div>
+              <div className={styles.titleWrapper}>
+                <p>{title}</p>
+              </div>
             </div>
-            <div className={styles.titleWrapper}>
+          </Tooltip>
+        );
+      }
+      default:
+        return <></>;
+    }
+  };
 
-              <p>BollyWood Songs</p>
-            </div>
-            </div>
-      
-          );
-        }
-     
-
+  return getCard(type);
+};
 
 export default Card;

@@ -1,10 +1,13 @@
+.wrapper {
+  width: 160px;
+}
+
 .card {
   position: relative;
   width: 160px;
   height: 205px;
   border-radius: 10px;
   overflow: hidden;
-  margin-left: 20px;
 }
 
 .banner {
@@ -28,6 +31,4 @@
   margin-top: 6px;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: 20px;
 }
-
