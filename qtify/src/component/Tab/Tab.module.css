@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-left: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+  
+  .toggleText {
+    cursor: pointer;
+    color: var(--color-primary);
+  }
+  
+  .cardWrapper {
+    margin-top: 18px;
+  }
+  
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
